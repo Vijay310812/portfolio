@@ -1,0 +1,288 @@
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  padding-top: 120px; /* space for fixed header */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  border-bottom: 2px solid #00bfa6;
+  position: fixed;       /* fixed at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.header-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* Profile pic on left */
+.header-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: fill;
+  border: 2px solid #00bfa6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Center name + nav */
+.header-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-width: calc(100vw - 160px); /* account for padding + image width */
+  white-space: nowrap;
+}
+
+.header-content h1 {
+  margin-bottom: 10px;
+  color: #00bfa6;
+  font-weight: 600;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+/* Navigation styling */
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #e0e0e0;
+  user-select: none;
+}
+
+/* Highlight Home button differently */
+/* nav a[href="#home"] {
+  background-color: #00bfa6;
+  color: #121212;
+  font-weight: 700;
+}
+
+nav a[href="#home"]:hover {
+  background-color: #008f7e;
+  color: #fff;
+}
+
+nav a:not([href="#home"]):hover {
+  color: #00bfa6;
+  cursor: pointer;
+} */
+ nav a:hover {
+  color: #00bfa6;
+  cursor: pointer;
+}
+
+
+/* ===== About Me Section ===== */
+.section h2 {
+  color: #00bfa6;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 2rem;
+  user-select: none;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  max-width: 700px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* ===== Projects Section ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 191, 166, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #00bfa6;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* ===== Certifications Section ===== */
+.cert-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+}
+
+.cert-list li {
+  margin-bottom: 15px;
+}
+
+.cert-list a {
+  color: #00bfa6;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.cert-list a:hover {
+  color: #33ffd9;
+  text-decoration: underline;
+}
+
+/* ===== Contact Section ===== */
+form#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+form#contact-form input,
+form#contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+form#contact-form textarea {
+  min-height: 120px;
+}
+
+form#contact-form button {
+  background-color: #00bfa6;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  color: #121212;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#contact-form button:hover {
+  background-color: #008f7e;
+}
+
+#response-message {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #00bfa6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  /* Stack header vertically and adjust padding */
+  .header-wrapper {
+    flex-direction: column;
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  .header-content {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+    white-space: normal;
+  }
+
+  body {
+    padding-top: 140px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Fix anchor scroll position for fixed header */
+section[id] {
+  scroll-margin-top: 130px;
+}
+.header-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 191, 166, 0.9);
+  cursor: pointer;
+}
+
