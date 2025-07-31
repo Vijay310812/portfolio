@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vijay's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body id="home">
+  <header>
+    <div class="container header-wrapper">
+      <img src="IMG-0859.jpg" alt="Profile" class="header-pic" />
+      <div class="header-content">
+        <h1>Vijay Solanki</h1>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="container section">
+    <h2>About Me</h2>
+    <p>I am a passionate software developer eager to build impactful digital solutions & building web applications using HTML, CSS, JavaScript, and modern frameworks.</p>
+  </section>
+
+  <section id="projects" class="container section">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Employee Management System</h3>
+        <p>A full-stack application for managing employee data, attendance, and performance.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>This website showcases my skills, certifications, and contact information.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="container section">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li><a href="https://drive.google.com/file/d/1OQ9CeH9QQVxhWf_ArmxEVS4KpvolrZee/view?usp=drive_link" target="_blank">Tata Data Visualization Certificate</a></li>
+      <li><a href="#" target="_blank">Google Data Analytics Certificate</a></li>
+      <li><a href="https://drive.google.com/file/d/1OSISrPuDKZOqXXFOKBkAoeKOvctWur5F/view?usp=drive_link" target="_blank">Webtech Certificate from Softpro India Computer Technologies (P) Ltd.</a></li>
+    </ul>
+  </section>
+
+  <section id="contact" class="container section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="response-message"></p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Vijay Solanki. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
